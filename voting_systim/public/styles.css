@@ -1,0 +1,145 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f7f7f7; /* Màu nền tổng thể */
+    margin: 0;
+    padding-top: 80px; /* Thêm khoảng trống cho phần header khi chưa cuộn */
+}
+
+/* Header Styles */
+.header {
+    position: fixed; /* Giữ header ở đầu trang */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Màu nền đen mờ */
+    backdrop-filter: blur(8px); /* Hiệu ứng làm mờ nền */
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px; /* Padding lớn khi chưa cuộn */
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Đổ bóng cho header */
+    transition: padding 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Khi cuộn trang */
+.header.sticky {
+    padding: 10px 20px; /* Giảm padding khi cuộn */
+    background: rgba(0, 0, 0, 0.8); /* Màu nền đậm hơn khi cuộn */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Tăng bóng cho header khi cuộn */
+}
+
+/* Logo Section */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+    margin-right: 10px;
+    border-radius: 50%; /* Làm logo tròn */
+    border: 2px solid #fff;
+}
+
+.site-name {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #f8f9fa;
+}
+
+/* Navigation Menu */
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #ffffff;
+    margin: 0 15px;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ff9800; /* Màu cam khi hover */
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ff9800;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* User Section */
+.user-section {
+    display: flex;
+    align-items: center;
+}
+
+.login-btn,
+.register-btn,
+.profile-btn,
+.logout-btn {
+    text-decoration: none;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.2); /* Nền trắng mờ */
+    padding: 5px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+    margin-left: 10px;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover,
+.register-btn:hover,
+.profile-btn:hover,
+.logout-btn:hover {
+    background: rgba(255, 255, 255, 0.4); /* Nền trắng đục khi hover */
+    color: #ff9800;
+    border-color: #ff9800;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-link {
+        margin: 10px 0;
+    }
+
+    .user-section {
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,181 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #6c63ff, #00bcd4);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.auth-container {
+    width: 400px;
+    padding: 40px;
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.auth-container h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.tab-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.tab-buttons button {
+    width: 48%;
+    padding: 12px;
+    background: #6c63ff;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-buttons button:hover {
+    background: #00bcd4;
+    transform: translateY(-3px);
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.input-group i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 18px;
+}
+
+.input-group input:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 0 5px rgba(108, 99, 255, 0.5);
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    background-color: #6c63ff;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #00bcd4;
+    transform: translateY(-3px);
+}
+
+.forgot-password {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #6c63ff;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.form-container {
+    display: none;
+}
+
+.form-container.active {
+    display: block;
+}
+
+.g-signin2 {
+    width: 100%;
+    padding: 12px;
+    background-color: #4285f4;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.g-signin2 {
+    width: 100%;
+    padding: 12px;
+    background-color: #4285f4; /* Màu của nút Google */
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.g-signin2:hover {
+    background-color: #34a853; /* Thay đổi màu khi hover */
+}
+
+.google-logo {
+    width: 20px;
+    height: 20px;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg') no-repeat center center;
+    background-size: contain;
+    margin-right: 10px;
+}
+
+.g-signin2 span {
+    display: inline-flex;
+    align-items: center;
+}
+
